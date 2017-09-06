@@ -13,7 +13,7 @@
   </head>
 
   <body>
-    <nav class="light-blue">
+    <nav class="deep-orange">
       <div class="nav-wrapper container">
         <a href="\" class="brand-logo">
           Discussions
@@ -21,7 +21,7 @@
         <ul class="right">
           <%= if @conn.assigns[:user] do %>
             <li>
-              Logout
+              <%= link "Sign Out", to: auth_path(@conn, :signout) %>
             </li>
           <% else %>
             <li>
